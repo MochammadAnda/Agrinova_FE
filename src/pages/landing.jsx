@@ -4,6 +4,7 @@ import Home from "../components/home";
 import About from "../components/about";
 import Feature from "../components/feature";
 import Footer from "../components/footer";
+import DownloadApp from "../components/DownloadApp";
 
 const Landing = () => {
   return (
@@ -12,6 +13,7 @@ const Landing = () => {
       <Home />
       <About />
       <Feature />
+      <DownloadApp />
       <Footer />
     </div>
   );
