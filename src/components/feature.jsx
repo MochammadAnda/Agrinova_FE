@@ -1,33 +1,47 @@
+import React from "react";
+// 1. IMPORT IKON BARU UNTUK FITUR TAMBAHAN
+import { RiRobot2Fill, RiBookletLine, RiBuilding4Line, RiSunCloudyLine } from "react-icons/ri";
+
 const Feature = () => {
+  // 2. PERBARUI DATA FITUR SESUAI PERMINTAAN
   const features = [
     {
-      icon: "🧬",
-      title: "AI Assistant",
-      description: "Get personalized recommendations for plant selection, care, and troubleshooting based on your environment.",
+      icon: <RiRobot2Fill className="w-8 h-8 text-green-600" />,
+      title: "Asisten AI Cerdas",
+      description: "Dapatkan rekomendasi cerdas untuk pemilihan bibit, perawatan harian, dan solusi masalah berdasarkan kondisi lingkungan Anda.",
     },
     {
-      icon: "🏭",
-      title: "Warehouse Management System",
-      description: "Manage your inventory, track finances, and log production data with ease.",
+      icon: <RiBookletLine className="w-8 h-8 text-green-600" />,
+      title: "Jurnal Tanam Digital",
+      description: "Catat semua aktivitas berkebun Anda, mulai dari penyemaian, pemupukan, hingga waktu panen dalam satu tempat yang terorganisir.",
     },
     {
-      icon: "👤",
-      title: "Personalized Profile",
-      description: "Track your progress, view activity logs, and customize your farming experience.",
+      icon: <RiBuilding4Line className="w-8 h-8 text-green-600" />,
+      title: "Sistem Manajemen Gudang",
+      description: "Pantau seluruh aset pertanian Anda. Mulai dari inventaris bibit dan pupuk, hingga pencatatan data produksi dan laporan keuangan sederhana.",
+    },
+    {
+      icon: <RiSunCloudyLine className="w-8 h-8 text-green-600" />,
+      title: "Prakiraan Cuaca",
+      description: "Dapatkan informasi cuaca real-time di lokasi Anda untuk merencanakan jadwal penyiraman dan perawatan dengan lebih baik.",
     },
   ];
 
   return (
-    <section id="features" className="min-h-screen bg-white flex items-center">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Unlock Your Farming Potential</h2>
+    <section id="features" className="py-20 px-4 bg-gray-50">
+      <div className="container mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-800">Semua yang Anda Butuhkan untuk Sukses</h2>
+          <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">Agrinova dilengkapi dengan fitur-fitur canggih yang dirancang khusus untuk menyederhanakan perjalanan berkebun Anda.</p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* 3. UBAH LAYOUT GRID UNTUK 4 ITEM */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center p-6 bg-white rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-center">{feature.description}</p>
+            <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-start text-left">
+              <div className="bg-green-100 p-4 rounded-full mb-6">{feature.icon}</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">{feature.title}</h3>
+              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
