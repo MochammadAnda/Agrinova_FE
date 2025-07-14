@@ -7,19 +7,6 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <nav className="bg-white shadow-lg p-4">
-          <ul className="flex space-x-4">
-            <li>
-              <Link to="/" className="text-blue-600 hover:text-blue-800">Home</Link>
-            </li>
-            <li>
-              <Link to="/login" className="text-blue-600 hover:text-blue-800">Login</Link>
-            </li>
-            <li>
-              <Link to="/dashboard" className="text-blue-600 hover:text-blue-800">Dashboard</Link>
-            </li>
-          </ul>
-        </nav> */}
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />

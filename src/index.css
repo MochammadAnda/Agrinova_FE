@@ -1,1 +1,30 @@
 @import "tailwindcss";
+/* Styling Scrollbar untuk Browser Webkit (Chrome, Safari, Edge) */
+
+/* Mengatur keseluruhan scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Membuat scrollbar lebih tipis */
+}
+
+/* Mengatur track (latar belakang scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* Warna abu-abu muda, senada dengan bg-gray-50 */
+}
+
+/* Mengatur thumb (bagian yang bisa digeser) */
+::-webkit-scrollbar-thumb {
+  background-color: #16a34a; /* Warna hijau utama Anda (green-600) */
+  border-radius: 10px; /* Membuat sudutnya membulat */
+  border: 2px solid #f1f5f9; /* Memberi sedikit jarak antara thumb dan track */
+}
+
+/* Mengatur thumb saat di-hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #15803d; /* Warna hijau yang sedikit lebih gelap (green-700) */
+}
+
+/* Styling Scrollbar untuk Firefox */
+html {
+  scrollbar-width: thin; /* Membuat scrollbar lebih tipis */
+  scrollbar-color: #16a34a #f1f5f9; /* Warna thumb dan warna track */
+}
